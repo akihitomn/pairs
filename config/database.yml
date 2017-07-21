@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: pairs_production
-  username: pairs
+  username: root
   password: <%= ENV['PAIRS_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
