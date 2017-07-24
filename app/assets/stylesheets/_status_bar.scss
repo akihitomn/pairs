@@ -1,0 +1,65 @@
+.main_header {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(94,94,94,.1);
+  display: block;
+  height: 45px;
+  .box_header_inner {
+    line-height: 1.0;
+    position: relative;
+    width: 928px;
+    margin: 0 auto;
+    padding: 8px 0;
+    clear: both;
+  }
+  .header_logo {
+    float: left;
+    margin-right: 12px;
+  }
+  .pairs_concept {
+    font-size: 12px;
+    float: left;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    color: #a1a7ac;
+  }
+  .box_header_notifCentered {
+    float: right;
+  }
+  .notifCentered_item {
+    position: relative;
+    float: left;
+    width: 60px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+  .notifCentered_item a {
+    display: none;
+    text-align: center;
+    width: 60px;
+  }
+}
+
+header, li, ul, img, div {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  transition: background-color .25s linear;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
