@@ -1,24 +1,68 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Option|
+|------|----|------|
+|name|string|null: false, add_index|
+|email|text|null: false|
+|sex|string|null: false|
+|image|text|
+|height|integer|
+|body|string|
+|bloodtype|string|
+|occupation|
+|area|string|
+|hometown|string|
+|education|string|
+|tobacco|string|
+|hobby|string|
+|nickname|string|
+|age|integer|
+|sibling|string|
+|nationality|string|
+|language|string|
+|introduction|text|
 
-Things you may want to cover:
 
-* Ruby version
+### Association
+- has_many :groups, through: groups_users
+- has_many :groups_users
+- has_many :messages
+- has_many :active_relationships, class_name: "Relastionship", foreign_key: "follower_id", dependent: :destroy
+- has_many :following, through: :active_relationships, source: :following
+- has_many :passive_relationship, class_name:"Relationship", foreign_key: "following_id", dependent: :destroy
+- has_many :followers, through: :passive_relationships, source: :follower
 
-* System dependencies
+## groups_users テーブル
+|Column|Type|Option|
+|------|----|------|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
-* Configuration
+### Association
+- belongs_to :user
+- belongs_to :group
 
-* Database creation
+## groups テーブル
 
-* Database initialization
+|Column|Type|Option|
+|------|----|------|
+|name|string|null: false, unique: true, add_index|
+|image|text|
+|user_id|integer|null: false, foreign_key: true|
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- has_many :users, through: groups_users
+- has_many :groups_users
 
-* Deployment instructions
+## messages テーブル
+|Column|Type|Option|
+|------|----|------|
+|message|text|
+|image|text|
+|user_id|integer|null: false, foreign_key: true|
 
-* ...
+### Association
+- belongs_to :users
+
+##relationship_table
