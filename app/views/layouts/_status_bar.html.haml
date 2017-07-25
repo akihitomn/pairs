@@ -8,6 +8,9 @@
       %li#notifCentered.notifCentered_item.notifCentered_message
         %a.hide
           #header_matching_count
+    %i.logout
+      =link_to destroy_user_session_path, method: :delete do
+        ログアウト
 .style
   .wrapper
     .side_contents
