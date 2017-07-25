@@ -1,3 +1,15 @@
+body {
+  margin: 0;
+}
+header, li, ul, img, div,p, img {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+}
+
 .main_header {
   position: relative;
   z-index: 10;
@@ -5,52 +17,43 @@
   box-shadow: 0 1px 2px rgba(94,94,94,.1);
   display: block;
   height: 45px;
-  .box_header_inner {
-    line-height: 1.0;
-    position: relative;
-    width: 928px;
-    margin: 0 auto;
-    padding: 8px 0;
-    clear: both;
-  }
-  .header_logo {
-    float: left;
-    margin-right: 12px;
-  }
-  .pairs_concept {
-    font-size: 12px;
-    float: left;
-    margin-top: 10px;
-    letter-spacing: 1px;
-    color: #a1a7ac;
-  }
-  .box_header_notifCentered {
-    float: right;
-  }
-  .notifCentered_item {
-    position: relative;
-    float: left;
-    width: 60px;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-    outline: none;
-  }
-  .notifCentered_item a {
-    display: none;
-    text-align: center;
-    width: 60px;
-  }
-}
-
-header, li, ul, img, div {
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  border: 0;
-  outline: 0;
+    .box_header_inner {
+      line-height: 1.0;
+      position: relative;
+      width: 928px;
+      margin: 0 auto;
+      padding: 8px 0;
+      clear: both;
+    }
+    .header_logo {
+      float: left;
+      margin-right: 12px;
+    }
+    .pairs_concept {
+      font-size: 12px;
+      float: left;
+      margin-top: 10px;
+      letter-spacing: 1px;
+      color: #a1a7ac;
+    }
+    .box_header_notifCentered {
+      float: right;
+    }
+    .notifCentered_item {
+      position: relative;
+      float: left;
+      width: 60px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+    }
+    .notifCentered_item a {
+      display: none;
+      text-align: center;
+      width: 60px;
+    }
 }
 
 li {
@@ -63,3 +66,218 @@ a {
   color: inherit;
   outline: none;
 }
+
+.wrapper {
+  display: table;
+  width: 928px;
+  height: 100%;
+  margin: 0 auto;
+  .side_contents {
+    display: table-cell;
+    width: 188px;
+    padding-top: 15px;
+    vertical-align: top;
+    border-right: 1px solid #cbced0;
+    border-left: 1px solid #cbced0;
+    background-color: #f7f7f7;
+    .my_profile_summary {
+        text-align: center;
+        margin-bottom: 12px;
+      .profile_photo {
+        margin-bottom: 12px;
+        img {
+          border-radius: 50%;
+        }
+        a {
+          transition: background-color .25s linear;
+          text-decoration: none;
+          color: #788086;
+          outline: none;
+          font-size: 50%;
+          margin: 0;
+          padding: 0;
+          vertical-align: baseline;
+          background: transparent;
+        }
+      }
+    .profile_name {
+      font-style: 1.6rem;
+      margin-bottom: 2px;
+      margin-top: 0px;
+    }
+    .profile_status_is_free_member {
+      color: #788086;
+      font-size: 13px;
+      font-weight: 700;
+      padding-right: 3px;
+    }
+  }
+    .my_profile_input_rate {
+      margin: 0 20px 20px;
+      .input_rate_label {
+        font-size: 12px;
+        margin-bottom: 2px;
+        color: #788086;
+      }
+      .input_rate_percent_value {
+        font-weight: 700;
+        display: inline-block;
+        float: right;
+        padding-left: 4px;
+        text-align: right;
+        color: #3db6e3;
+        font-size: 11px;
+      }
+      .box_input_rate_grahp {
+        overflow: hidden;
+        width: 100%;
+        vertical-align: middle;
+        border: 1px solid #cbced0;
+        border-radius: 4px;
+        background-color: #fff;
+        .value_is_percent_100 {
+          width: 100%;
+          height: 10px;
+          background-color: #3db6e3;
+        }
+      }
+    }
+    .ml10 {
+      margin-left: 10px!important;
+    }
+    .mb15 {
+      margin-bottom: 15px!important;
+    }
+    .box_my_status {
+      height: 85px;
+    }
+    .my_statuse_list {
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: #cbced0;
+      box-shadow: 0 1px 0 white;
+    }
+    .my_status_item {
+      float: left;
+      box-sizing: border-box;
+      width: 50%;
+      padding: 10px 0;
+      text-align: center;
+      box-shadow: 1px 1px 0 white inset;
+      .leftover_like {
+        border-right: 1px solid #cdced0;
+      }
+      .status_label {
+        font-size: 12px;
+        margin-bottom: 2px;
+        color: #788086;
+      }
+      .stats_value {
+        font-size: 15px;
+        margin-bottom: 2px;
+      }
+      a {
+        transition: background-color .25s linear;
+        text-decoration: none;
+        color: #788086;
+        outline: none;
+        font-size: 11px;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+        background: transparent;
+      }
+      .button_orange {
+        color: #fff;
+        background-color: #ffbe40;
+        box-shadow: 0 3px 0 #dea22e;
+      }
+      .button_c {
+        font-size: 12px;
+        line-height: 1.0;
+        display: inline-block;
+        padding: 4px 10px 6px;
+        border-radius: 30px;
+      }
+    }
+    .box_my_private_mode {
+      border-width: 0 0 1px;
+      border-style: solid;
+      border-color: #cbced0;
+      box-shadow: 0 1px 0 white;
+    }
+    .box_pm_state {
+      margin: 15px 10px;
+    }
+    .pm_state_image {
+      float: left;
+      padding-right: 6px;
+    }
+    img {
+      vertical-align: bottom;
+    }
+    .pm_state_text {
+      font-size: 12px;
+      line-height: 1.2;
+      float: clear;
+      height: 24px;
+      padding-top: 2px;
+      padding-right: 5px;
+      padding-bottom: 2px;
+      text-align: justify;
+      color: #788086;
+    }
+    .link_pm_setting {
+      clear: both;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 12px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #788086;
+    }
+  .box_navi {
+    ul,li {
+      list-style: none;
+    }
+  }
+}
+  .box_gnavis01, .box_gnavis02, .box_gnavis03, .box_gnavis04, .box_gnavis05, .box_gnavis06, .box_gnavis07 {
+    padding: 20px 0 12px;
+    border-bottom: 1px solid #cbced0;
+    box-shadow: 0 1px 0 white;
+  }
+  .box_gnavis01 a{
+    background-color: #dfe1e3;
+  }
+  .gnavi_title {
+    font-size: 13px;
+    margin: 0 0 4px 20px;
+    color: #bec3c9;
+  }
+  .gnavi_item {
+    font-size: 14px;
+    position: relative;
+  }
+
+  .gnavi_item a{
+    display: block;
+    padding: 8px 15px;
+  }
+  .box_other_navi {
+    padding: 20px;
+  }
+  nav ul{
+    list-style: none;
+  }
+  .other_navi_item {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #8ecfd3;
+  }
+  .main_contents {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
