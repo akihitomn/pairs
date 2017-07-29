@@ -18,11 +18,14 @@
         .my_profile_summary
           %p.profile_photo
             %a
+            =link_to "/users/#{current_user.id}/edit", method: :get do
               %img{src: "https://pairs-production.akamaized.net/icon/7544/1657544/1471062965_dd470b65490b90f8c22663a5e00d6f40.png?v=1&impolicy=pairs160x160&imwidth=160&width=160&height=160", height: "60", width: "60"}
           %p.profile_name
-            %a AM 東京
+            %a
+            =link_to "/users/#{current_user.id}/edit", method: :get do
+              AM 東京
           %p.profile_status_is_free_member
-            %a 無料会員
+            %a VIP会員
         .my_profile_input_rate
           %p.input_rate_label
             プロフィール入力率
@@ -150,7 +153,7 @@
           %li.other_navi_item.other_navi_item02
             %a
               ヘルプ
-    .main_contents
+    .user_contents
   / .hide#js_lang_unselected
   / .hide#js_lang_community_category_title_popular
   / .hide#js_lang_community_category_title_new
