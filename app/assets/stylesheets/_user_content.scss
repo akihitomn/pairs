@@ -58,7 +58,90 @@
   width: 230px;
   float: left;
 }
+.hide {
+  display: none;
+}
+.box_popup_input {
+  position: absolute;
+  z-index: 1000;
+  width: 280px;
+  cursor: auto;
+}
+.form_text input {
+  font-size: 12px;
+  line-height: 1.2;
+  width: 100%;
+}
+.popup_input_inner {
+  position: relative;
+  padding: 15px;
+  color: #788086;
+  border: 1px solid #cbced0;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
+}
+.popup_input_title {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #53b7bb;
+}
 
+.form_select select{
+  appearance: pop-up-menu;
+  width: 248px;
+  position: absolute;
+  opacity: 0;
+  height: 29px;
+  font-size: 12px;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+.customSelect {
+  width: 100%!important;
+  font-size: 12px;
+  box-sizing: border-box;
+  height: 29px;
+  padding: 6px 40px 6px 14px;
+  border-collapse: separate;
+  white-space: nowrap;
+  color: #788086;
+  border: 1px solid #cbced0;
+  border-radius: 30px;
+  background-color: #fff;
+  background-image: url(https://static-pairs.akamaized.net/public/img/pc/icon/icon_select_arrow.png?v170728110749-0914473),none;
+  background-repeat: no-repeat;
+  background-position: right center;
+  box-shadow: 0 2px 0 #c9c9c9;
+}
+.form_item {
+  margin-bottom: 15px;
+  height: 20px;
+}
+.action_button_list {
+    float: right;
+}
+.action_button_list .action_button_item {
+    float: left;
+}
+.button_pink_a {
+    color: #fff;
+    background-color: #f06976;
+    box-shadow: 0 2px 0 #ed4655;
+}
+.action_button_item.renew_button {
+    margin-left: 5px;
+}
+.button_blue_a{
+  color: #fff;
+  background-color: #71c3c8;
+  box-shadow: 0 3px 0 #53b7bb;
+}
 .user_status {
   margin-bottom: 10px;
   background-color: #fff;
@@ -455,18 +538,29 @@
 .button_new_entry {
     float: right;
 }
-.button_white_a {
-    color: #8d9399;
-    border: 1px solid #cbced0;
-    background-color: #fff;
-    box-shadow: 0 2px 0 #c9c9c9;
+.box_form_action_button {
+  height: 20px;
 }
+.button_pink_a {
+    color: #fff;
+    background-color: #f06976;
+    box-shadow: 0 2px 0 #ed4655;
+}
+.button_blue_a {
+    color: #fff;
+    background-color: #71c3c8;
+    box-shadow: 0 3px 0 #53b7bb;
+}
+
 .button_f {
     font-size: 12px;
     line-height: 1.0;
     display: inline-block;
     padding: 8px 12px;
     border-radius: 30px;
+    text-decoration: none;
+    outline: none;
+    border: 0;
 }
 .join_community_list {
     border-bottom: 1px solid #e1e3e5;

@@ -23,7 +23,7 @@
           %p.profile_name
             %a
             =link_to "/users/#{current_user.id}/edit", method: :get do
-              AM 東京
+              =current_user.name
           %p.profile_status_is_free_member
             %a VIP会員
         .my_profile_input_rate
@@ -261,6 +261,52 @@
                       次の4枚
             .mypage_detailinner02
               .mypage_detail_inner_left
+                %div#box_popup_edit
+                  .hide#popup_text
+                    .box_popup_input
+                      .popup_input_inner
+                        %p.popup_input_title
+                          職種を選択してください
+                        %div.form_item.form_select
+                          %select
+                            %option
+                              選択してください
+                            %option
+                              上場企業
+                            %option
+                              金融
+                            %option
+                              公務員
+                            %option
+                              コンサル
+                            %option
+                              経営者、役員
+                            %option
+                              大手企業
+                            %option
+                              大手外資
+                            %option
+                              大手商社
+                            %option
+                              外資金融
+                            %option
+                              医師
+                            %option
+                              無職
+                          %span.customSelect
+                            %span.customSelectInner
+                              選択してください
+                        %div.form_item.form_text
+                          %input.ng-pristine{placeholder: "入力して下さい"}
+
+                        %div.box_form_action_button
+                          %ul.action_button_list
+                            %li.action_button_item
+                              %button.button_f.button_pink_a
+                                閉じる
+                            %li.action_button_item.renew_button
+                              %button.button_f.button_blue_a
+                                更新
                 .box_profile_detail
                   %p.detail_sub_note.pb10.borderb1
                     項目を選択すると編集できます
@@ -271,38 +317,66 @@
                     %dt.detail_item_title
                       %span.item_title
                         身長
-                    %dd.detail_item_value
-                      165cm
+                    -if current_user.height
+                      %dd.detail_item_value
+                        =current_user.height
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         体形
-                    %dd.detail_item_value
-                      筋肉質
+                    -if current_user.body
+                      %dd.detail_item_value
+                        =current_user.body
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         血液型
-                    %dd.detail_item_value
-                      B型
+                    -if current_user.bloodtype
+                      %dd.detail_item_value
+                        =current_user.bloodtype
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         居住地
-                    %dd.detail_item_value
-                      東京
+                    -if current_user.area
+                      %dd.detail_item_value
+                        =current_user.area
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         出身地
-                    %dd.detail_item_value
-                      大阪
+                    -if current_user.hometown
+                      %dd.detail_item_value
+                        =current_user.hometown
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         職種
-                    %dd.detail_item_value
-                      無職
+                    -if current_user.occupation
+                      %dd.detail_item_value
+                        =current_user.occupation
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         学歴
-                    %dd.detail_item_value
-                      大卒
+                    -if current_user.education
+                      %dd.detail_item_value
+                        =current_user.education
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         年収
@@ -311,8 +385,12 @@
                     %dt.detail_item_title
                       %span.item_title
                         タバコ
-                    %dd.detail_item_value
-                      吸わない
+                    -if current_user.tobacco
+                      %dd.detail_item_value
+                        =current_user.tobacco
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                   %p.detail_sub_title
                     %span.title_a
                       詳細プロフ
@@ -327,23 +405,39 @@
                     %dt.detail_item_title
                       %span.item_title
                         年齢
-                    %dd.detail_item_value
-                      29歳
+                    -if current_user.age
+                      %dd.detail_item_value
+                        =current_user.age
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         兄弟姉妹
-                    %dd.detail_item_value
-                      長男
+                    -if current_user.sibling
+                      %dd.detail_item_value
+                        =current_user.sibling
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         国籍
-                    %dd.detail_item_value
-                      日本
+                    -if current_user.nationality
+                      %dd.detail_item_value
+                        =current_user.nationality
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                     %dt.detail_item_title
                       %span.item_title
                         話せる言語
-                    %dd.detail_item_value
-                      英語、日本語
+                    -if current_user.language
+                      %dd.detail_item_value
+                        =current_user.language
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入れて下さい
                   %p.detail_sub_title
                     恋愛・結婚について
                   %dl.detail_item_list
@@ -408,8 +502,12 @@
                     %dt.detail_item_title
                       %span.item_title
                         好きなこと・趣味
-                    %dd.detail_item_value
-                      ファッション・読書・サーフィン
+                    -if current_user.hobby
+                      %dd.detail_item_value
+                      =current_user.hobby
+                    -else
+                      %dd.detail_item_value
+                        ステータスを入力して下さい。
                 %a.button_a.button_white_a
                   質問つきいいね！の設定
               .mypage_detail_inner_right

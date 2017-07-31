@@ -23,7 +23,7 @@
           %p.profile_name
             %a
             =link_to "/users/#{current_user.id}/edit", method: :get do
-              AM 東京
+              =current_user.name
           %p.profile_status_is_free_member
             %a VIP会員
         .my_profile_input_rate
