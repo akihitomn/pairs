@@ -33,6 +33,8 @@ gem 'haml', '5.0.0.beta.2'
 gem 'haml-rails', '~> 0.9'
 gem 'erb2haml'
 gem 'devise'
+gem 'pry-byebug'
+gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
