@@ -92,7 +92,10 @@ GEM
     erubi (1.6.1)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.8.4)
+      i18n (~> 0.5)
     ffi (1.9.18)
+    forgery (0.6.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     haml (5.0.0.beta.2)
@@ -130,6 +133,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_magick (4.8.0)
     mini_portile2 (2.2.0)
     minitest (5.10.3)
     multi_json (1.12.1)
@@ -260,11 +264,14 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+  faker
+  forgery
   haml (= 5.0.0.beta.2)
   haml-rails (~> 0.9)
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  mini_magick
   mysql2 (>= 0.3.18, < 0.5)
   pry-byebug
   puma (~> 3.7)

@@ -35,6 +35,9 @@ gem 'erb2haml'
 gem 'devise'
 gem 'pry-byebug'
 gem 'jquery-rails'
+gem 'mini_magick'
+gem 'faker'
+gem 'forgery'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
