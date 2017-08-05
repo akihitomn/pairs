@@ -1,0 +1,65 @@
+.main_box_search_view {
+  padding: 20px 0 0 17px;
+  min-height: 500px;
+  margin-bottom: 50px;
+}
+.list_view_users {
+  overflow: hidden;
+  width: 732px;
+  margin-right: -13px;
+  margin-bottom: 15px;
+}
+.list_view_user_item {
+  position: relative;
+  float: left;
+  width: 168px;
+  min-height: 320px;
+  margin: 0 13px 13px 0;
+}
+.list_view_user_photo {
+  border: 4px solid #fff;
+  box-shadow: 0 0 3px rgba(120,120,120,.35);
+  border-radius: 50%;
+}
+.box_user_info01 {
+  font-size: 14px;
+  margin: 10px 8px 2px;
+  text-align: center;
+}
+.user_summary {
+  padding-right: 3px;
+  display: inline-block;
+}
+.button_like {
+  margin: 0 8px 12px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #f48d97;
+  box-shadow: 0 3px 0 #f06976;
+}
+.button_d {
+  font-size: 14px;
+  line-height: 1.0;
+  display: block;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 30px;
+}
+.user_chemistry {
+  font-size: 13px;
+  color: #f48d97;
+}
+.member_tweet {
+  font-size: 12px;
+  line-height: 1.2;
+  position: relative;
+  width: 148px;
+  min-height: 28px;
+  margin: 6px 0 10px;
+  padding: 5px;
+  text-align: left;
+  color: #788086;
+  border: 1px solid #8ecfd3;
+  border-radius: 6px;
+  background: #fff;
+}
