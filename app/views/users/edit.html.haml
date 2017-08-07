@@ -194,38 +194,16 @@
                       過去1週間の足跡
                     %p.count
                       40人
-                  %ul.user_list
-                    %li.user_item
-                      %a
-                        %img.image_circle{src: "https://pairs-production.akamaized.net/icon/8069/3538069/1498416529_280a06ca0e1493759bb2d95af1391591bec11a71.jpg?v=1&impolicy=pairs82x82&imwidth=82&width=35&height=35",  height: "35px", width: "35px"}
-                        %p.user_info
-                          27歳 東京
-                        %p.user_time
-                          01:10
-                  %ul.user_list
-                    %li.user_item
-                      %a
-                        %img.image_circle{src: "https://pairs-production.akamaized.net/icon/6141/2326141/1499685782_4dee2cbcbab8d43d3a7fcc31657aaca16fe99c48.jpg?v=1&impolicy=pairs82x82&imwidth=82&width=35&height=35",  height: "35px", width: "35px"}
-                        %p.user_info
-                          23歳 東京
-                        %p.user_time
-                          7月28日
-                  %ul.user_list
-                    %li.user_item
-                      %a
-                        %img.image_circle{src: "https://pairs-production.akamaized.net/icon/0135/590135/1496723300_71330749d0e6b852773955e8a44d71085d72adae.jpg?v=1&impolicy=pairs82x82&imwidth=82&width=35&height=35",  height: "35px", width: "35px"}
-                        %p.user_info
-                          28歳 千葉
-                        %p.user_time
-                          7月28日
-                  %ul.user_list
-                    %li.user_item
-                      %a
-                        %img.image_circle{src: "https://pairs-production.akamaized.net/icon/5600/3545600/1500903916_b52e64b6dd63ae9ac4cce7c8af7cc0834074faee.jpg?v=1&impolicy=pairs82x82&imwidth=82&width=35&height=35",  height: "35px", width: "35px"}
-                        %p.user_info
-                          25歳 東京
-                        %p.user_time
-                          7月28日
+                  -@users.each do |user|
+                    -if user.active_relationships.find_by(following_id: current_user.id)
+                      %ul.user_list
+                        %li.user_item
+                          %a
+                            %img.image_circle{src: "https://i2.wp.com/xn--zck3adi4kpbxc7d2131c340f.jp/wp-content/uploads/2014/11/9399d51be895fc97432a6a2088d8f96b.png?resize=250%2C232", height: "35px", width: "35px"}
+                            %p.user_info
+                              =user.name
+                            %p.user_time
+                              01:10
                   .box_link_more
                     %a.more_button
                       もっと見る

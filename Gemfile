@@ -35,9 +35,11 @@ gem 'erb2haml'
 gem 'devise'
 gem 'pry-byebug'
 gem 'jquery-rails'
-gem 'mini_magick'
+gem 'carrierwave'
+gem 'mini_magick', require: 'mini_magick'
 gem 'faker'
 gem 'forgery'
+gem 'kaminari'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

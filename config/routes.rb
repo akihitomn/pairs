@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'users#index'
-  resources :users, only: [:edit, :update]
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :relationships, only: [:create, :destroy]
 end

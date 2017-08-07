@@ -159,31 +159,34 @@
           %div
             .box_list_view_user
               %ul.list_view_users
-                %li.list_view_user_item.is_new_arrival_a
-                  %div
-                    %div
+                -@users.each do |user|
+                  -if user.sex != current_user.sex
+                    %li.list_view_user_item.is_new_arrival_a
                       %div
-                        %a
-                          %img.list_view_user_photo{src: "https://pairs-production.akamaized.net/icon/4656/3694656/1501505906_c1c5c1945c393f28a3dbd90587290188d911bece.jpg?v=1&impolicy=pairs160x160&imwidth=160&width=160&height=160"}
-                  %div
-                    .box_user_info01
-                      %p.user_summary
-                        %span.user_login
-                        %span.user_area
-                          東京
-                        %span.user_age
-                          24歳
-                    .box_user_info03
-                      %p.user_chemistry
-                        69%
-                      %p.user_like_count
-                      .member_tweet
-                        .user_tweet_body
-                          始めまして！
-                    .box_button_like
-                      %div.partner
-                        %span
-                          %a.button_like.button_d
-                            %span.like
-                              いいね！
-/ = render "layouts/status_bar"
+                        %div
+                          %div
+                            %a
+                              %img.list_view_user_photo
+                      %div
+                        .box_user_info01
+                          %p.user_summary
+                            %span.user_login
+                            %span.user_name
+                              =user.name
+                            %span.user_age
+                              24歳
+                        .box_user_info03
+                          %p.user_chemistry
+                            69%
+                          %p.user_like_count
+                          .member_tweet
+                            .user_tweet_body
+                              始めまして！
+                        .box_button_like
+                          = form_for(current_user.active_relationships.build) do |f|
+                            .partner
+                              = hidden_field_tag :following_id, user.id
+                              %span
+                                %a
+                                  = f.submit "いいね!", class: "button_like.button_d"
+  / = render "layouts/status_bar"
