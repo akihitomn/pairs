@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     member do
       get :following, :followers
     end
+    resources :groups, only: [:index, :new]
   end
   resources :relationships, only: [:create, :destroy]
 end
