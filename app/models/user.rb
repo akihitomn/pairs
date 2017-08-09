@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :passive_relationships, foreign_key: "following_id", class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :passive_relationships
 
+  has_many :groups, through: :groups_users
+  has_many :groups_users
+
   def following?(other_user)
     following.include?(other_user)
   end

@@ -266,6 +266,9 @@ option {
 .user_list {
   margin: 0 10px 5px;
 }
+.user_list:hover {
+  background-color: #dfe1e3;
+}
 .user_item {
   border-bottom: 1px dashed #e1e3e5;
 }
