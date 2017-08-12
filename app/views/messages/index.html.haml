@@ -165,7 +165,7 @@
                 -@users.each do |user|
                   -if user.active_relationships.find_by(following_id: current_user.id)
                     %li.matching_item.is_un_answered
-                      =link_to user_groups_path(user_ids: [current_user.id, user.id]), method: :post do
+                      =link_to "users/#{current_user.id}/groups", method: :post do
                         %img.user_photo.image_circle{src: "https://pairs-production.akamaized.net/icon/6065/3396065/1500195817_4f9c07c5cbbb6ad0843bda52431b40cbea37604b.jpg?v=1&impolicy=pairs160x160&imwidth=160&width=160&height=160", height: "55px", width: "55px"}
                         .info_inner
                           .user_info01
@@ -175,3 +175,11 @@
                           %p.login_time
                             8/4 7:14
             .box_message_inner_right
+              .ui_view
+                .deta_messages
+                  .box_message_exchange_title
+                    %p.user_name
+                      %a
+                        M 27歳
+                  .box_message_exchange.box_inner_scroll.scroll_to_bottom
+                  .box_message_action

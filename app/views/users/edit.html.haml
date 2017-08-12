@@ -88,9 +88,11 @@
               マッチング
             %ul
               %li.gnavi_item.is_current
-                %a
-                  %span
-                    メッセージ
+                =link_to "/users/#{current_user.id}/groups", method: :get do
+                  メッセージ
+                / %a
+                /   %span
+                /     メッセージ
           .box_gnavis04
             %p.gnavi_title
               コミュニティ
