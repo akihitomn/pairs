@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
 
   def index
     @users = current_user.followings
-    @group = Group.new
   end
 
   def create

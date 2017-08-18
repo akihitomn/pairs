@@ -183,3 +183,10 @@
                         M 27歳
                   .box_message_exchange.box_inner_scroll.scroll_to_bottom
                   .box_message_action
+                    %textarea.message_textarea{placeholder: "メッセージを入力する"}
+                    .box_message_action_inner
+                      %ul.message_option_list
+                        %li.message_option_item
+                          %button.button_message_submit.button_b{type: "submit"}
+                            送信
+

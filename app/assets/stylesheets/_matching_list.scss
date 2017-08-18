@@ -102,3 +102,50 @@ img {
   background-color: #f1f1f1;
   height: 200px;
 }
+.message_textarea {
+  min-height: 100px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+textarea {
+  font-size: 13px;
+  line-height: 1.8;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  resize: vertical;
+  border: 1px solid #cbced0;
+  background: #fff;
+}
+.box_message_action_inner {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e4e4e4;
+  height: 70px;
+}
+.message_option_list {
+  float: right;
+}
+.message_option_item {
+  float: right;
+  margin-left: 10px;
+  list-style: none;
+}
+.button_message_submit {
+  width: 60px;
+  color: #fff;
+  background-color: #71c3c8;
+  box-shadow: 0 3px 0 #53b7bb;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.button_b {
+  font-size: 14px;
+  line-height: 1.0;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+}
