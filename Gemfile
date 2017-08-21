@@ -40,6 +40,8 @@ gem 'mini_magick', require: 'mini_magick'
 gem 'faker'
 gem 'forgery'
 gem 'kaminari'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
